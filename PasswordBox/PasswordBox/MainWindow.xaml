@@ -12,10 +12,7 @@
     <MicaBackdrop />
   </Window.SystemBackdrop>
 
-  <StackPanel
-    HorizontalAlignment="Center"
-    VerticalAlignment="Center"
-    Orientation="Horizontal">
-    <Button x:Name="myButton">Click Me</Button>
+  <StackPanel Spacing="8 ">
+    <TextBlock Text="{x:Bind MyViewModel.Name, Mode=OneWay}" />
   </StackPanel>
 </Window>

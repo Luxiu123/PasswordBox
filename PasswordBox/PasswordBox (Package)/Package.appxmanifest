@@ -9,7 +9,7 @@
 
   <Identity
     Name="e457d3a3-8b85-43da-8cc2-2fa5b165f252"
-    Publisher="CN=Admin"
+    Publisher="CN=luxiu"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="e457d3a3-8b85-43da-8cc2-2fa5b165f252" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
