@@ -12,7 +12,5 @@
     <MicaBackdrop />
   </Window.SystemBackdrop>
 
-  <StackPanel Spacing="8 ">
-    <TextBlock Text="{x:Bind MyViewModel.Name, Mode=OneWay}" />
-  </StackPanel>
+  <Frame Name="MainFrame" />
 </Window>

@@ -7,23 +7,13 @@ namespace PasswordBox;
 public sealed partial class MainWindow : Window {
     private AppWindow CurrentAppWindow;
 
-    private MyViewModel MyViewModel = new();
-
-    private Timer Timer = new(500);
-
     public MainWindow() {
         this.InitializeComponent();
-
         CurrentAppWindow = GetAppWindowForCurrentWindow();
         CurrentAppWindow.Title = "App title";
         CurrentAppWindow.Resize(new(1000, 600));
         SetTitleBarColors();
-        Timer.Elapsed += (_, _) => {
-            Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, );
-            MyViewModel.Name = DateTime.Now.ToString();
-            //CurrentTime = DateTime.Now.ToString();
-        };
-        Timer.Start();
+        MainFrame.Navigate(typeof(PasswordListPage));
     }
 
     private AppWindow GetAppWindowForCurrentWindow() {
@@ -43,14 +33,5 @@ public sealed partial class MainWindow : Window {
         titleBar.ExtendsContentIntoTitleBar = true;
         titleBar.IconShowOptions = IconShowOptions.HideIconAndSystemMenu;
         return true;
-    }
-}
-
-[INotifyPropertyChanged]
-public partial class MyViewModel {
-    private string name = "abc";
-    public string Name {
-        get { return name; }
-        set { name = value; OnPropertyChanged(nameof(Name)); }
     }
 }

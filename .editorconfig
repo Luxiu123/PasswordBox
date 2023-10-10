@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# MVVMTK0032: Inherit from ObservableObject instead of using [INotifyPropertyChanged]
+dotnet_diagnostic.MVVMTK0032.severity = silent
